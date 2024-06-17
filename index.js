@@ -25,6 +25,9 @@ console.log("Current Directory:", currentDir);
 // Now __dirname contains the full directory path of the current module
 console.log(__dirname);
 app.use(express.static(path.join(__dirname, "/client/build")));
+app.get('/privacypolicy', (req, res) => {
+  res.sendFile(path.join(__dirname, 'html/privacy.html'));
+});
 app.get("*", (req, res) =>
     res.sendFile(path.join(__dirname, "../client/build/index.html"))
   );
