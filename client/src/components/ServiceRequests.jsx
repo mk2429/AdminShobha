@@ -6,10 +6,9 @@ export default function ServiceRequests() {
   useEffect(() => {
     fetch('https://adminshobha.onrender.com/api/getrequest')
       .then(response => response.json())
-      .then(data => setRequests(data))
+      .then(data => setRequests(data.reverse()))
       .catch(error => console.error('Error fetching data:', error));
   }, []);
-
   return (
     <div className="container mt-5">
       <h1 className="mb-4">Service Requests</h1>
