@@ -4,7 +4,7 @@ export default function ServiceRequests() {
   const [requests, setRequests] = useState([]);
 
   useEffect(() => {
-    fetch('https://adminshobha.onrender.com/api/getrequest')
+    fetch('https://shobhashoppingcentre.onrender.com/api/getrequest')
       .then(response => response.json())
       .then(data => setRequests(data.reverse()))
       .catch(error => console.error('Error fetching data:', error));

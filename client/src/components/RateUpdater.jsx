@@ -16,7 +16,7 @@ export default function RateUpdater() {
 
   const handleUpdateRate = async () => {
     try {
-      const res = await fetch('https://adminshobha.onrender.com/api/setrates', {
+      const res = await fetch('https://shobhashoppingcentre.onrender.com/api/setrates', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
